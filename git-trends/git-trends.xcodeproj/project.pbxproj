@@ -155,16 +155,16 @@
 		81E0BD90251E4CDF00543306 /* Git-Trends */ = {
 			isa = PBXGroup;
 			children = (
-				81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */,
-				81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */,
-				81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */,
-				81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */,
-				81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */,
-				81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */,
 				81E0BD97251E4CDF00543306 /* GitTrendingPresenter.swift */,
-				81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */,
-				81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */,
+				81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */,
 				81E0BD9A251E4CDF00543306 /* GitTrendingView.swift */,
+				81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */,
+				81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */,
+				81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */,
+				81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */,
+				81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */,
+				81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */,
+				81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */,
 			);
 			path = "Git-Trends";
 			sourceTree = "<group>";
