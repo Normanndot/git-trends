@@ -15,6 +15,17 @@
 		81E0BD6A251E4C3D00543306 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81E0BD68251E4C3D00543306 /* LaunchScreen.storyboard */; };
 		81E0BD75251E4C3D00543306 /* git_trendsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD74251E4C3D00543306 /* git_trendsTests.swift */; };
 		81E0BD80251E4C3D00543306 /* git_trendsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD7F251E4C3D00543306 /* git_trendsUITests.swift */; };
+		81E0BD9D251E4CDF00543306 /* GitTrendingRowCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */; };
+		81E0BD9E251E4CDF00543306 /* GitTrendingActionlistener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */; };
+		81E0BD9F251E4CDF00543306 /* GitTrendingAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */; };
+		81E0BDA0251E4CDF00543306 /* GitTrendingNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */; };
+		81E0BDA1251E4CDF00543306 /* GitTrendingViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */; };
+		81E0BDA2251E4CDF00543306 /* GitTrendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */; };
+		81E0BDA3251E4CDF00543306 /* GitTrendingPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD97251E4CDF00543306 /* GitTrendingPresenter.swift */; };
+		81E0BDA4251E4CDF00543306 /* GitTrendingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */; };
+		81E0BDA5251E4CDF00543306 /* GitTrendingCellFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */; };
+		81E0BDA6251E4CDF00543306 /* GitTrendingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD9A251E4CDF00543306 /* GitTrendingView.swift */; };
+		81E0BDA7251E4CDF00543306 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD9C251E4CDF00543306 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +60,17 @@
 		81E0BD7B251E4C3D00543306 /* git-trendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "git-trendsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD7F251E4C3D00543306 /* git_trendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = git_trendsUITests.swift; sourceTree = "<group>"; };
 		81E0BD81251E4C3D00543306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingRowCell.swift; sourceTree = "<group>"; };
+		81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingActionlistener.swift; sourceTree = "<group>"; };
+		81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingAdapter.swift; sourceTree = "<group>"; };
+		81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingNavigator.swift; sourceTree = "<group>"; };
+		81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingViewModelFactory.swift; sourceTree = "<group>"; };
+		81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingModel.swift; sourceTree = "<group>"; };
+		81E0BD97251E4CDF00543306 /* GitTrendingPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingPresenter.swift; sourceTree = "<group>"; };
+		81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingViewModel.swift; sourceTree = "<group>"; };
+		81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingCellFactory.swift; sourceTree = "<group>"; };
+		81E0BD9A251E4CDF00543306 /* GitTrendingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingView.swift; sourceTree = "<group>"; };
+		81E0BD9C251E4CDF00543306 /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +128,8 @@
 				81E0BD66251E4C3D00543306 /* Assets.xcassets */,
 				81E0BD68251E4C3D00543306 /* LaunchScreen.storyboard */,
 				81E0BD6B251E4C3D00543306 /* Info.plist */,
+				81E0BD9B251E4CDF00543306 /* Extensions */,
+				81E0BD90251E4CDF00543306 /* Git-Trends */,
 			);
 			path = "git-trends";
 			sourceTree = "<group>";
@@ -126,6 +150,31 @@
 				81E0BD81251E4C3D00543306 /* Info.plist */,
 			);
 			path = "git-trendsUITests";
+			sourceTree = "<group>";
+		};
+		81E0BD90251E4CDF00543306 /* Git-Trends */ = {
+			isa = PBXGroup;
+			children = (
+				81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */,
+				81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */,
+				81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */,
+				81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */,
+				81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */,
+				81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */,
+				81E0BD97251E4CDF00543306 /* GitTrendingPresenter.swift */,
+				81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */,
+				81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */,
+				81E0BD9A251E4CDF00543306 /* GitTrendingView.swift */,
+			);
+			path = "Git-Trends";
+			sourceTree = "<group>";
+		};
+		81E0BD9B251E4CDF00543306 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				81E0BD9C251E4CDF00543306 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +308,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E0BD62251E4C3B00543306 /* ViewController.swift in Sources */,
+				81E0BDA4251E4CDF00543306 /* GitTrendingViewModel.swift in Sources */,
+				81E0BDA5251E4CDF00543306 /* GitTrendingCellFactory.swift in Sources */,
 				81E0BD5E251E4C3B00543306 /* AppDelegate.swift in Sources */,
+				81E0BD9E251E4CDF00543306 /* GitTrendingActionlistener.swift in Sources */,
+				81E0BD9F251E4CDF00543306 /* GitTrendingAdapter.swift in Sources */,
+				81E0BDA3251E4CDF00543306 /* GitTrendingPresenter.swift in Sources */,
+				81E0BD9D251E4CDF00543306 /* GitTrendingRowCell.swift in Sources */,
+				81E0BDA7251E4CDF00543306 /* UIView+Extension.swift in Sources */,
+				81E0BDA1251E4CDF00543306 /* GitTrendingViewModelFactory.swift in Sources */,
+				81E0BDA6251E4CDF00543306 /* GitTrendingView.swift in Sources */,
+				81E0BDA2251E4CDF00543306 /* GitTrendingModel.swift in Sources */,
+				81E0BDA0251E4CDF00543306 /* GitTrendingNavigator.swift in Sources */,
 				81E0BD60251E4C3B00543306 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
