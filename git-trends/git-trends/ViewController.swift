@@ -14,14 +14,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setUp()
-
     }
 
     private func setUp() {
         self.title = "Github Trends"
         let view = gitTrendingView()
         let navigator = GitTrendingViewNavigator(navigation: self.navigationController)
-        presenter = GitTrendingViewPresenter(displayer: view, navigator: navigator)
+        let service = APIService()
+        let useCase = GitTrendingUseCase(apiService: service)
+        presenter = GitTrendingViewPresenter(displayer: view,
+                                             navigator: navigator,
+                                             useCase: useCase)
         presenter?.startPresenting()
     }
     

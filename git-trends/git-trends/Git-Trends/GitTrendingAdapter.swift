@@ -32,7 +32,7 @@ final class GitTrendingAdapter: NSObject {
 extension GitTrendingAdapter: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return viewModel?.rows.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -40,7 +40,7 @@ extension GitTrendingAdapter: UITableViewDataSource {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return viewModel?.rows.count ?? 0
+        return 1
     }
 }
 
@@ -57,10 +57,10 @@ extension GitTrendingAdapter: UITableViewDelegate {
 
 extension GitTrendingAdapter {
     private func rowViewModel(at indexPath: IndexPath) -> GitTrendingRow {
-        guard let viewModel = viewModel?.rows[indexPath.row] else {
+        guard let model = viewModel?.rows[indexPath.row] else {
                 preconditionFailure("Expected a setting row at \(indexPath)")
         }
         
-        return viewModel
+        return model
     }
 }

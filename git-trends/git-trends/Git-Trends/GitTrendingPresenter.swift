@@ -15,21 +15,30 @@ protocol GitTrendingPresenter {
 final class GitTrendingViewPresenter: GitTrendingPresenter {
     private let displayer: GitTrendingDisplayer
     private let navigator: GitTrendingNavigator
-    private let viewModel: GitTrendingViewModel
     private let factory: GitTrendingViewModelFactory
-
+    private let useCase: TrendingUseCase
+    
     init(displayer: GitTrendingDisplayer,
          navigator: GitTrendingNavigator,
-         factory: GitTrendingViewModelFactory = GitTrendingViewModelFactory()) {
+         factory: GitTrendingViewModelFactory = GitTrendingViewModelFactory(),
+         useCase: TrendingUseCase) {
         self.displayer = displayer
         self.navigator = navigator
         self.factory = factory
-        self.viewModel = factory.viewModel()
+        self.useCase = useCase
     }
     
     func startPresenting() {
-        displayer.attachListener(listener: newListener())
-        displayer.update(with: viewModel)
+        useCase.fetchTopGitTrending { (response) in
+            switch response {
+            case .success(let repos):
+                self.displayer.attachListener(listener: self.newListener())
+                self.displayer.update(with: self.factory.viewModel(for: repos))
+            case .failure(let error):
+                self.displayer.attachListener(listener: self.newListener())
+//                self.displayer.update(with: self.viewModel)
+            }
+        }
     }
     
     func stopPresenting() {

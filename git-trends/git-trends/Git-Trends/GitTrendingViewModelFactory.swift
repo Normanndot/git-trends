@@ -8,7 +8,10 @@
 import Foundation
 
 final class GitTrendingViewModelFactory {
-    func viewModel() -> GitTrendingViewModel {
-        return GitTrendingViewModel(rows: [GitTrendingRow.gitTrendingDetails(viewModel: GitTrendingRowViewModel(name: "bootstrap", starCount: "14423", description: "askdfjha asdfjhaldks jfahsdkf alshdfj alksdjfh aklsdfj alsfh alksdf "))])
+    func viewModel(for trendingRepos: Repos) -> GitTrendingViewModel {
+        return GitTrendingViewModel(rows: trendingRepos.map {
+            let viewModel = GitTrendingRowViewModel(name: $0.name, starCount: "\($0.stars)", description: $0.description)
+            return GitTrendingRow.gitTrendingDetails(viewModel: viewModel)
+        })
     }
 }

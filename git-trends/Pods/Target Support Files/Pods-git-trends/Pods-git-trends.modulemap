@@ -1,0 +1,6 @@
+framework module Pods_git_trends {
+  umbrella header "Pods-git-trends-umbrella.h"
+
+  export *
+  module * { export * }
+}
