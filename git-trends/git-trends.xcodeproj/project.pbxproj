@@ -147,6 +147,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		818E3F16251F614600C8CB22 /* GitTrendingList */ = {
+			isa = PBXGroup;
+			children = (
+				81E0BD97251E4CDF00543306 /* GitTrendingPresenter.swift */,
+				81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */,
+				81E0BD9A251E4CDF00543306 /* GitTrendingView.swift */,
+				81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */,
+				81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */,
+				81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */,
+				81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */,
+				81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */,
+				81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */,
+				81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */,
+				8184EF47251E4F5A00E44FA0 /* GitTrendingUseCase.swift */,
+			);
+			path = GitTrendingList;
+			sourceTree = "<group>";
+		};
+		818E3F17251F618400C8CB22 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8184EF4C251E504900E44FA0 /* APIServiceInterface.swift */,
+				8184EF51251E509300E44FA0 /* APIResponse.swift */,
+				8184EF56251E515C00E44FA0 /* Requestable.swift */,
+				81832123251E55100055E9A0 /* Request.swift */,
+				8184EF5B251E536600E44FA0 /* APIService.swift */,
+				8183212C251E553D0055E9A0 /* URLFormable.swift */,
+				81832131251E55540055E9A0 /* APIServiceError.swift */,
+				81832136251E55870055E9A0 /* RequestEncoding.swift */,
+				81832146251E5ED00055E9A0 /* API.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		818E3F18251F619B00C8CB22 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				818E3EF8251F1C5200C8CB22 /* URLCacheable.swift */,
+				818E3EFD251F1C8B00C8CB22 /* RequestURLCache.swift */,
+				818E3F02251F1D8800C8CB22 /* DiskURLCache.swift */,
+				818E3F07251F1DB700C8CB22 /* CachedURLResponse.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
 		81E0BD51251E4C3B00543306 = {
 			isa = PBXGroup;
 			children = (
@@ -206,30 +251,9 @@
 		81E0BD90251E4CDF00543306 /* Git-Trends */ = {
 			isa = PBXGroup;
 			children = (
-				81E0BD97251E4CDF00543306 /* GitTrendingPresenter.swift */,
-				81E0BD96251E4CDF00543306 /* GitTrendingModel.swift */,
-				81E0BD9A251E4CDF00543306 /* GitTrendingView.swift */,
-				81E0BD98251E4CDF00543306 /* GitTrendingViewModel.swift */,
-				81E0BD95251E4CDF00543306 /* GitTrendingViewModelFactory.swift */,
-				81E0BD93251E4CDF00543306 /* GitTrendingAdapter.swift */,
-				81E0BD92251E4CDF00543306 /* GitTrendingActionlistener.swift */,
-				81E0BD94251E4CDF00543306 /* GitTrendingNavigator.swift */,
-				81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */,
-				81E0BD99251E4CDF00543306 /* GitTrendingCellFactory.swift */,
-				8184EF47251E4F5A00E44FA0 /* GitTrendingUseCase.swift */,
-				8184EF4C251E504900E44FA0 /* APIServiceInterface.swift */,
-				8184EF51251E509300E44FA0 /* APIResponse.swift */,
-				8184EF56251E515C00E44FA0 /* Requestable.swift */,
-				81832123251E55100055E9A0 /* Request.swift */,
-				8184EF5B251E536600E44FA0 /* APIService.swift */,
-				8183212C251E553D0055E9A0 /* URLFormable.swift */,
-				81832131251E55540055E9A0 /* APIServiceError.swift */,
-				81832136251E55870055E9A0 /* RequestEncoding.swift */,
-				81832146251E5ED00055E9A0 /* API.swift */,
-				818E3EF8251F1C5200C8CB22 /* URLCacheable.swift */,
-				818E3EFD251F1C8B00C8CB22 /* RequestURLCache.swift */,
-				818E3F02251F1D8800C8CB22 /* DiskURLCache.swift */,
-				818E3F07251F1DB700C8CB22 /* CachedURLResponse.swift */,
+				818E3F18251F619B00C8CB22 /* Cache */,
+				818E3F17251F618400C8CB22 /* Service */,
+				818E3F16251F614600C8CB22 /* GitTrendingList */,
 			);
 			path = "Git-Trends";
 			sourceTree = "<group>";

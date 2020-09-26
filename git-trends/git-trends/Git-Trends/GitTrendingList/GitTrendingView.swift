@@ -14,6 +14,7 @@ protocol GitTrendingDisplayer: class {
     func update(with viewModel: GitTrendingViewModel)
     func attachRefresh(handler: @escaping (Bool) -> ())
     func detachRefresh()
+//    func error()
 }
 
 final class GitTrendingView: UIView {
