@@ -87,8 +87,8 @@ final class GitTrendingRowCell: UITableViewCell {
     }
     
     func configureCell(item: GitTrendingRowViewModel) {
-        name.text = item.name
-        favouriteIcon.image = item.imageIcon
+        name.text = item.author
+        favouriteIcon.image = #imageLiteral(resourceName: "star")
         favouriteCount.text = item.starCount
         gitDescription.text = item.description
     }

@@ -8,9 +8,6 @@
 import Foundation
 import UIKit
 import WebKit
-//protocol GitDetailDisplayer: class {
-//    func update(with viewModel: GitTrendingViewModel)
-//}
 
 final class GitDetailView: UIView {
     static private let iconSize: CGFloat = 75.0
@@ -30,7 +27,6 @@ final class GitDetailView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24.0)
         label.textColor = .systemRed
-        label.text = "vuejs"
         return label
     }()
     
@@ -45,20 +41,12 @@ final class GitDetailView: UIView {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .gray
-        label.text = "asdkjfnalsdkj alksdfjh aklsdfjh alskdfjh alksdfh laksdfhj aklsdjfh aklsdfhakl sdfjh aslkdjf asdjfha jlsdfhg alsjdfhg aljsdfhg alskdfhalsjk dfgalsdjk fhalsdjf alsdjfhal sdfhadls k"
         return label
     }()
 
     private let starCount: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
-        let attributedString = NSMutableAttributedString()
-        let dashAttachment = NSTextAttachment()
-        dashAttachment.image = #imageLiteral(resourceName: "star")
-        dashAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
-        attributedString.append(NSAttributedString(attachment: dashAttachment))
-        attributedString.append(NSAttributedString(string: "144589 Stars"))
-        label.attributedText = attributedString
         return label
     }()
     
@@ -71,13 +59,6 @@ final class GitDetailView: UIView {
     private let forkCount: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
-        let attributedString = NSMutableAttributedString()
-        let dashAttachment = NSTextAttachment()
-        dashAttachment.image = #imageLiteral(resourceName: "fork")
-        dashAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
-        attributedString.append(NSAttributedString(attachment: dashAttachment))
-        attributedString.append(NSAttributedString(string: "21030 Forks"))
-        label.attributedText = attributedString
         return label
     }()
     
@@ -109,9 +90,6 @@ extension GitDetailView {
     func setup() {
         setupHierarchy()
         applyConstraints()
-        let myURL = URL(string: "https://www.apple.com")
-        let myRequest = URLRequest(url: myURL!)
-        webView.load(myRequest)
     }
     
     private func setupHierarchy() {
@@ -186,12 +164,42 @@ extension GitDetailView {
         
         webView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            webView.widthAnchor.constraint(equalToConstant: frame.width-40),
-            webView.heightAnchor.constraint(equalToConstant: frame.width-40),
             webView.topAnchor.constraint(equalTo: readMe.bottomAnchor, constant: 10),
-            webView.centerXAnchor.constraint(equalTo: gitDescription.centerXAnchor)
+            webView.centerXAnchor.constraint(equalTo: gitDescription.centerXAnchor),
+            webView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            webView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
+            webView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20)
         ])
     }
 }
 
 extension GitDetailView: WKUIDelegate {}
+
+extension GitDetailView {
+    func update(with viewModel: GitTrendingRowViewModel) {
+        let myURL = URL(string: viewModel.repoURL)
+        let myRequest = URLRequest(url: myURL!)
+        webView.load(myRequest)
+        icon.image = #imageLiteral(resourceName: "star")
+        gitDescription.text = viewModel.description
+        
+        let forkAttString = NSMutableAttributedString()
+        let forkAttachment = NSTextAttachment()
+        forkAttachment.image = #imageLiteral(resourceName: "fork")
+        forkAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
+        forkAttString.append(NSAttributedString(attachment: forkAttachment))
+        forkAttString.append(NSAttributedString(string: viewModel.forkCount + " Forks"))
+        forkCount.attributedText = forkAttString
+        
+        let starAttString = NSMutableAttributedString()
+        let starAttachment = NSTextAttachment()
+        starAttachment.image = #imageLiteral(resourceName: "star")
+        starAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
+        starAttString.append(NSAttributedString(attachment: starAttachment))
+        starAttString.append(NSAttributedString(string: viewModel.starCount + " Stars"))
+        starCount.attributedText = starAttString
+        
+        name.text = viewModel.authorName
+    }
+}
+

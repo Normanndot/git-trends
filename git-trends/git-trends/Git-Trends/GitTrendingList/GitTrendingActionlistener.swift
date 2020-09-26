@@ -8,5 +8,5 @@
 import Foundation
 
 struct GitTrendingActionlistener {
-    let toGitDetailView: () -> Void
+    let toGitDetailView: (GitTrendingRow) -> Void
 }

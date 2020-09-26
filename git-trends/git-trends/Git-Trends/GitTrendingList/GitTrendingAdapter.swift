@@ -52,7 +52,7 @@ extension GitTrendingAdapter: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        actionListener?.toGitDetailView()
+        actionListener?.toGitDetailView(rowViewModel(at: indexPath))
     }
 }
 

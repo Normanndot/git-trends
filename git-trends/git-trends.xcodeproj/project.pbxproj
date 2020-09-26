@@ -26,8 +26,6 @@
 		818E3F0D251F3BFF00C8CB22 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F0C251F3BFF00C8CB22 /* String+Ext.swift */; };
 		818E3F12251F483600C8CB22 /* TimeInterval+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */; };
 		818E3F1B251F620A00C8CB22 /* GitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F1A251F620A00C8CB22 /* GitDetailViewController.swift */; };
-		818E3F23251F624700C8CB22 /* GitDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F22251F624700C8CB22 /* GitDetailPresenter.swift */; };
-		818E3F28251F625F00C8CB22 /* GitDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F27251F625F00C8CB22 /* GitDetailViewModel.swift */; };
 		818E3F2D251F626D00C8CB22 /* GitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F2C251F626D00C8CB22 /* GitDetailView.swift */; };
 		81E0BD5E251E4C3B00543306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5D251E4C3B00543306 /* AppDelegate.swift */; };
 		81E0BD60251E4C3B00543306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */; };
@@ -93,8 +91,6 @@
 		818E3F0C251F3BFF00C8CB22 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Ext.swift"; sourceTree = "<group>"; };
 		818E3F1A251F620A00C8CB22 /* GitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailViewController.swift; sourceTree = "<group>"; };
-		818E3F22251F624700C8CB22 /* GitDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailPresenter.swift; sourceTree = "<group>"; };
-		818E3F27251F625F00C8CB22 /* GitDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailViewModel.swift; sourceTree = "<group>"; };
 		818E3F2C251F626D00C8CB22 /* GitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailView.swift; sourceTree = "<group>"; };
 		81E0BD5A251E4C3B00543306 /* git-trends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git-trends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD5D251E4C3B00543306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -204,8 +200,6 @@
 			isa = PBXGroup;
 			children = (
 				818E3F1A251F620A00C8CB22 /* GitDetailViewController.swift */,
-				818E3F22251F624700C8CB22 /* GitDetailPresenter.swift */,
-				818E3F27251F625F00C8CB22 /* GitDetailViewModel.swift */,
 				818E3F2C251F626D00C8CB22 /* GitDetailView.swift */,
 			);
 			path = GitTrendingDetail;
@@ -560,7 +554,6 @@
 				8184EF52251E509300E44FA0 /* APIResponse.swift in Sources */,
 				81E0BD9E251E4CDF00543306 /* GitTrendingActionlistener.swift in Sources */,
 				81832137251E55870055E9A0 /* RequestEncoding.swift in Sources */,
-				818E3F23251F624700C8CB22 /* GitDetailPresenter.swift in Sources */,
 				81E0BD9F251E4CDF00543306 /* GitTrendingAdapter.swift in Sources */,
 				81E0BDA3251E4CDF00543306 /* GitTrendingPresenter.swift in Sources */,
 				8183212D251E553D0055E9A0 /* URLFormable.swift in Sources */,
@@ -568,7 +561,6 @@
 				818E3F1B251F620A00C8CB22 /* GitDetailViewController.swift in Sources */,
 				81E0BDA7251E4CDF00543306 /* UIView+Ext.swift in Sources */,
 				8183213C251E5D3D0055E9A0 /* URLRequest+Ext.swift in Sources */,
-				818E3F28251F625F00C8CB22 /* GitDetailViewModel.swift in Sources */,
 				818E3F2D251F626D00C8CB22 /* GitDetailView.swift in Sources */,
 				81E0BDA1251E4CDF00543306 /* GitTrendingViewModelFactory.swift in Sources */,
 				818E3F12251F483600C8CB22 /* TimeInterval+Ext.swift in Sources */,

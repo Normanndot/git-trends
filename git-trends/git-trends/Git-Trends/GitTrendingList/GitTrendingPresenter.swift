@@ -63,7 +63,7 @@ final class GitTrendingViewPresenter: GitPresenter {
         return GitTrendingActionlistener(toGitDetailView: toGitDetailView)
     }
     
-    private func toGitDetailView() {
-        navigator.toGitDetailView()
+    private func toGitDetailView(model: GitTrendingRow) {
+        navigator.toGitDetailView(model: model)
     }
 }

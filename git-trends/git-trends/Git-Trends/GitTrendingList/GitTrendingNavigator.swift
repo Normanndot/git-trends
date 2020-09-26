@@ -10,7 +10,7 @@ import UIKit
 
 protocol GitTrendingNavigator: class {
     var navController: UINavigationController? { get }
-    func toGitDetailView()
+    func toGitDetailView(model: GitTrendingRow)
 }
 
 final class GitTrendingViewNavigator: GitTrendingNavigator {
@@ -20,8 +20,11 @@ final class GitTrendingViewNavigator: GitTrendingNavigator {
         self.navController = navigation
     }
     
-    func toGitDetailView() {
-        let detail = GitDetailViewController()
-        navController?.pushViewController(detail, animated: true)
+    func toGitDetailView(model: GitTrendingRow) {
+        switch model {
+        case .gitTrendingDetails(let detailModel):
+            let detail = GitDetailViewController(viewModel: detailModel)
+            navController?.pushViewController(detail, animated: true)
+        }
     }
 }

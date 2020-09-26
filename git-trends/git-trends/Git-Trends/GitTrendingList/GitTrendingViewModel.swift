@@ -13,10 +13,13 @@ struct GitTrendingViewModel {
 }
 
 struct GitTrendingRowViewModel {
-    let name: String
-    let starCount: String
+    let author: String
+    let authorIcon: String
+    let authorName: String
     let description: String
-    let imageIcon = TrendingIcon.favorite.image
+    let starCount: String
+    let forkCount: String
+    let repoURL: String
 }
 
 enum TrendingIcon: String {
@@ -35,7 +38,7 @@ enum GitTrendingRow: Equatable {
     static func == (lhs: GitTrendingRow, rhs: GitTrendingRow) -> Bool {
         switch (lhs, rhs) {
         case (.gitTrendingDetails(let a), .gitTrendingDetails(let b)):
-            return a.name == b.name
+            return a.repoURL == b.repoURL
         }
     }
 }
