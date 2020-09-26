@@ -13,19 +13,24 @@ import WebKit
 //}
 
 final class GitDetailView: UIView {
+    static private let iconSize: CGFloat = 75.0
+    
     lazy var yPos: CGFloat = {
         self.frame.origin.y
     }()
     
     private let icon: UIImageView = {
         let img = UIImageView()
+        img.clipsToBounds = true
+        img.layer.cornerRadius = iconSize/2
         return img
     }()
 
     private let name: UILabel = {
         let label = UILabel()
-        label.font = UIFont.boldSystemFont(ofSize: 20)
-        label.text = "SAJDBksdjbSK"
+        label.font = UIFont.systemFont(ofSize: 24.0)
+        label.textColor = .systemRed
+        label.text = "vuejs"
         return label
     }()
     
@@ -46,27 +51,39 @@ final class GitDetailView: UIView {
 
     private let starCount: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.text = "asdbjs"
+        label.font = UIFont.systemFont(ofSize: 16)
+        let attributedString = NSMutableAttributedString()
+        let dashAttachment = NSTextAttachment()
+        dashAttachment.image = #imageLiteral(resourceName: "star")
+        dashAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
+        attributedString.append(NSAttributedString(attachment: dashAttachment))
+        attributedString.append(NSAttributedString(string: "144589 Stars"))
+        label.attributedText = attributedString
         return label
     }()
     
     private let verticleDividerLine: UIView = {
         let view = UIView()
-        view.backgroundColor = .darkGray
+        view.backgroundColor = .lightGray
         return view
     }()
     
     private let forkCount: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
-        label.text = "asdbjs"
+        label.font = UIFont.systemFont(ofSize: 16)
+        let attributedString = NSMutableAttributedString()
+        let dashAttachment = NSTextAttachment()
+        dashAttachment.image = #imageLiteral(resourceName: "fork")
+        dashAttachment.bounds = CGRect(x: 0, y: -5, width: 20, height: 20)
+        attributedString.append(NSAttributedString(attachment: dashAttachment))
+        attributedString.append(NSAttributedString(string: "21030 Forks"))
+        label.attributedText = attributedString
         return label
     }()
     
     private let readMe: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: 18)
         label.text = "Readme.md"
         return label
     }()
@@ -112,8 +129,8 @@ extension GitDetailView {
     func applyConstraints() {
         icon.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            icon.widthAnchor.constraint(equalToConstant: 75),
-            icon.heightAnchor.constraint(equalToConstant: 75),
+            icon.widthAnchor.constraint(equalToConstant: GitDetailView.iconSize),
+            icon.heightAnchor.constraint(equalToConstant: GitDetailView.iconSize),
             icon.centerXAnchor.constraint(equalTo: centerXAnchor),
             icon.topAnchor.constraint(equalTo: topAnchor, constant: yPos + 20)
         ])
@@ -126,7 +143,7 @@ extension GitDetailView {
         
         horizontalDividerLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            horizontalDividerLine.widthAnchor.constraint(equalToConstant: 50),
+            horizontalDividerLine.widthAnchor.constraint(equalToConstant: 40),
             horizontalDividerLine.heightAnchor.constraint(equalToConstant: 1),
             horizontalDividerLine.centerXAnchor.constraint(equalTo: name.centerXAnchor),
             horizontalDividerLine.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 20)
@@ -142,7 +159,7 @@ extension GitDetailView {
         verticleDividerLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             verticleDividerLine.widthAnchor.constraint(equalToConstant: 1),
-            verticleDividerLine.heightAnchor.constraint(equalToConstant: 30),
+            verticleDividerLine.heightAnchor.constraint(equalToConstant: 20),
             verticleDividerLine.topAnchor.constraint(equalTo: gitDescription.bottomAnchor, constant: 50),
             verticleDividerLine.centerXAnchor.constraint(equalTo: gitDescription.centerXAnchor)
         ])
@@ -164,7 +181,7 @@ extension GitDetailView {
         readMe.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             readMe.topAnchor.constraint(equalTo: verticleDividerLine.bottomAnchor, constant: 10),
-            readMe.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 40)
+            readMe.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
         ])
         
         webView.translatesAutoresizingMaskIntoConstraints = false
