@@ -36,15 +36,7 @@ final class GitTrendingRowCell: UITableViewCell {
         label.textColor = .gray
         return label
     }()
-    
-    var gitDescriptionWidth: CGFloat {
-        return gitDescription.frame.width
-    }
-    
-    var gitDescriptionFont: UIFont {
-        return gitDescription.font
-    }
-    
+        
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUp()

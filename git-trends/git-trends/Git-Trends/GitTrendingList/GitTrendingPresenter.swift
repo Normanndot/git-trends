@@ -7,12 +7,12 @@
 
 import Foundation
 
-protocol GitTrendingPresenter {
+protocol GitPresenter {
     func startPresenting()
     func stopPresenting()
 }
 
-final class GitTrendingViewPresenter: GitTrendingPresenter {
+final class GitTrendingViewPresenter: GitPresenter {
     private let displayer: GitTrendingDisplayer
     private let navigator: GitTrendingNavigator
     private let factory: GitTrendingViewModelFactory
@@ -64,6 +64,6 @@ final class GitTrendingViewPresenter: GitTrendingPresenter {
     }
     
     private func toGitDetailView() {
-        //navigate to git detail view
+        navigator.toGitDetailView()
     }
 }

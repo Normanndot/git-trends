@@ -21,6 +21,7 @@ final class GitTrendingViewNavigator: GitTrendingNavigator {
     }
     
     func toGitDetailView() {
-        //navigate to git detail view
+        let detail = GitDetailViewController()
+        navController?.pushViewController(detail, animated: true)
     }
 }

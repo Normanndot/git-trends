@@ -8,7 +8,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    private var presenter: GitTrendingPresenter? = nil
+    private var presenter: GitPresenter? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
