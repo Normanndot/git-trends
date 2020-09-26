@@ -29,16 +29,30 @@ final class GitTrendingViewPresenter: GitTrendingPresenter {
     }
     
     func startPresenting() {
-        useCase.fetchTopGitTrending { (response) in
+        
+        fetch(forced: true)
+        let refreshHandler: (Bool) -> () = { [weak self] value in
+            self?.fetch(forced: value)
+        }
+        
+        displayer.attachRefresh(handler: refreshHandler)
+        
+    }
+    
+    private func fetch(forced: Bool = false) {
+        useCase.fetchTopGitTrending(with: { (response) in
             switch response {
             case .success(let repos):
                 self.displayer.attachListener(listener: self.newListener())
                 self.displayer.update(with: self.factory.viewModel(for: repos))
+                
+                if forced {
+                    self.displayer.detachRefresh()
+                }
             case .failure(let error):
-                self.displayer.attachListener(listener: self.newListener())
-//                self.displayer.update(with: self.viewModel)
+                print(error)
             }
-        }
+        }, forcely: forced)
     }
     
     func stopPresenting() {

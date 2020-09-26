@@ -12,12 +12,16 @@ protocol GitTrendingDisplayer: class {
     func attachListener(listener: GitTrendingActionlistener)
     func detachListener()
     func update(with viewModel: GitTrendingViewModel)
+    func attachRefresh(handler: @escaping (Bool) -> ())
+    func detachRefresh()
 }
 
 final class GitTrendingView: UIView {
     private let tableView: UITableView
     private let adapter = GitTrendingAdapter()
-
+    private let refreshControl = UIRefreshControl()
+    private var refreshHandler: (Bool) -> () = {_ in }
+    
     override init(frame: CGRect) {
         tableView = UITableView(frame: frame, style: .plain)
         super.init(frame: frame)
@@ -40,9 +44,23 @@ final class GitTrendingView: UIView {
         tableView.delegate = adapter
         tableView.dataSource = adapter
         tableView.separatorStyle = .none
+        tableView.addSubview(refreshControl)
+        refreshControl.addTarget(self, action: #selector(refresh(handler:)), for: .valueChanged)
         GitTrendingCellFactory.registerCells(for: tableView)
     }
     
+    func attachRefresh(handler: @escaping (Bool) -> ()) {
+        self.refreshHandler = handler
+    }
+    
+    func detachRefresh() {
+        refreshControl.endRefreshing()
+    }
+    
+    @objc func refresh(handler: (Bool) -> ()) {
+        refreshHandler(true)
+    }
+
     func applyConstraints() {
         tableView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 0).isActive = true
         tableView.topAnchor.constraint(equalTo: self.topAnchor, constant: 0).isActive = true
