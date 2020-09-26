@@ -27,4 +27,14 @@ final class GitTrendingCellFactory {
             return cell
         }
     }
+    
+    func heightForRow(for viewModel: GitTrendingRow,
+                      at indexPath: IndexPath,
+                      in tableView: UITableView) -> CGFloat {
+        switch viewModel {
+        case .gitTrendingDetails(let viewRowModel):
+            return viewRowModel.description.heightWithConstrainedWidth(width: tableView.frame.width-32,
+                                                                       font: UIFont.systemFont(ofSize: 16)) + 68
+        }
+    }
 }

@@ -9,11 +9,11 @@ import Foundation
 
 struct Request: Requestable {
     
-    let url: URLFormable
-    let httpMethod: RequestMethod
-    let parameters: RequestParameters?
-    let headers: RequestHeaders?
-    let encoding: RequestEncoding
+    private let url: URLFormable
+    private let httpMethod: RequestMethod
+    private let parameters: RequestParameters?
+    private let headers: RequestHeaders?
+    private let encoding: RequestEncoding
     
     init(url: URLFormable,
          method: RequestMethod,
@@ -34,5 +34,24 @@ struct Request: Requestable {
             request = try self.encoding.encode(request, with: parameters)
         }
         return request
+    }
+}
+
+struct CacheableRequest: CacheRequestable {
+    
+    let request: Request
+    let expiry: CacheExpiry
+    
+    init(request: Request, expiry: CacheExpiry) {
+        self.request = request
+        self.expiry = expiry
+    }
+    
+    func asURLRequest() throws -> URLRequest {
+        let urlRequest = try self.request.asURLRequest()
+        guard let method = urlRequest.httpMethod, RequestMethod(rawValue: method) == .some(.get) else {
+            throw APIServiceError.CacheableRequestError.invalidMethod
+        }
+        return urlRequest
     }
 }

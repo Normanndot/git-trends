@@ -21,7 +21,7 @@ class ViewController: UIViewController {
         let view = gitTrendingView()
         let navigator = GitTrendingViewNavigator(navigation: self.navigationController)
         let service = APIService()
-        let useCase = GitTrendingUseCase(apiService: service)
+        let useCase = GitTrendingUseCase(apiService: service,cache: DiskURLCache.default)
         presenter = GitTrendingViewPresenter(displayer: view,
                                              navigator: navigator,
                                              useCase: useCase)

@@ -19,6 +19,12 @@
 		8184EF52251E509300E44FA0 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8184EF51251E509300E44FA0 /* APIResponse.swift */; };
 		8184EF57251E515C00E44FA0 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8184EF56251E515C00E44FA0 /* Requestable.swift */; };
 		8184EF5C251E536600E44FA0 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8184EF5B251E536600E44FA0 /* APIService.swift */; };
+		818E3EF9251F1C5200C8CB22 /* URLCacheable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3EF8251F1C5200C8CB22 /* URLCacheable.swift */; };
+		818E3EFE251F1C8B00C8CB22 /* RequestURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3EFD251F1C8B00C8CB22 /* RequestURLCache.swift */; };
+		818E3F03251F1D8800C8CB22 /* DiskURLCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F02251F1D8800C8CB22 /* DiskURLCache.swift */; };
+		818E3F08251F1DB700C8CB22 /* CachedURLResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F07251F1DB700C8CB22 /* CachedURLResponse.swift */; };
+		818E3F0D251F3BFF00C8CB22 /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F0C251F3BFF00C8CB22 /* String+Ext.swift */; };
+		818E3F12251F483600C8CB22 /* TimeInterval+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */; };
 		81E0BD5E251E4C3B00543306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5D251E4C3B00543306 /* AppDelegate.swift */; };
 		81E0BD60251E4C3B00543306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */; };
 		81E0BD62251E4C3B00543306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD61251E4C3B00543306 /* ViewController.swift */; };
@@ -76,6 +82,12 @@
 		8184EF51251E509300E44FA0 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
 		8184EF56251E515C00E44FA0 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		8184EF5B251E536600E44FA0 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		818E3EF8251F1C5200C8CB22 /* URLCacheable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLCacheable.swift; sourceTree = "<group>"; };
+		818E3EFD251F1C8B00C8CB22 /* RequestURLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestURLCache.swift; sourceTree = "<group>"; };
+		818E3F02251F1D8800C8CB22 /* DiskURLCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiskURLCache.swift; sourceTree = "<group>"; };
+		818E3F07251F1DB700C8CB22 /* CachedURLResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedURLResponse.swift; sourceTree = "<group>"; };
+		818E3F0C251F3BFF00C8CB22 /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
+		818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Ext.swift"; sourceTree = "<group>"; };
 		81E0BD5A251E4C3B00543306 /* git-trends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git-trends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD5D251E4C3B00543306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -214,6 +226,10 @@
 				81832131251E55540055E9A0 /* APIServiceError.swift */,
 				81832136251E55870055E9A0 /* RequestEncoding.swift */,
 				81832146251E5ED00055E9A0 /* API.swift */,
+				818E3EF8251F1C5200C8CB22 /* URLCacheable.swift */,
+				818E3EFD251F1C8B00C8CB22 /* RequestURLCache.swift */,
+				818E3F02251F1D8800C8CB22 /* DiskURLCache.swift */,
+				818E3F07251F1DB700C8CB22 /* CachedURLResponse.swift */,
 			);
 			path = "Git-Trends";
 			sourceTree = "<group>";
@@ -223,6 +239,8 @@
 			children = (
 				81E0BD9C251E4CDF00543306 /* UIView+Ext.swift */,
 				8183213B251E5D3D0055E9A0 /* URLRequest+Ext.swift */,
+				818E3F0C251F3BFF00C8CB22 /* String+Ext.swift */,
+				818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -505,14 +523,20 @@
 				81E0BDA7251E4CDF00543306 /* UIView+Ext.swift in Sources */,
 				8183213C251E5D3D0055E9A0 /* URLRequest+Ext.swift in Sources */,
 				81E0BDA1251E4CDF00543306 /* GitTrendingViewModelFactory.swift in Sources */,
+				818E3F12251F483600C8CB22 /* TimeInterval+Ext.swift in Sources */,
 				81E0BDA6251E4CDF00543306 /* GitTrendingView.swift in Sources */,
+				818E3F0D251F3BFF00C8CB22 /* String+Ext.swift in Sources */,
 				8184EF48251E4F5A00E44FA0 /* GitTrendingUseCase.swift in Sources */,
 				81832147251E5ED00055E9A0 /* API.swift in Sources */,
+				818E3EF9251F1C5200C8CB22 /* URLCacheable.swift in Sources */,
 				81E0BDA2251E4CDF00543306 /* GitTrendingModel.swift in Sources */,
 				81832124251E55100055E9A0 /* Request.swift in Sources */,
 				81E0BDA0251E4CDF00543306 /* GitTrendingNavigator.swift in Sources */,
+				818E3EFE251F1C8B00C8CB22 /* RequestURLCache.swift in Sources */,
+				818E3F08251F1DB700C8CB22 /* CachedURLResponse.swift in Sources */,
 				81E0BD60251E4C3B00543306 /* SceneDelegate.swift in Sources */,
 				81832132251E55540055E9A0 /* APIServiceError.swift in Sources */,
+				818E3F03251F1D8800C8CB22 /* DiskURLCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

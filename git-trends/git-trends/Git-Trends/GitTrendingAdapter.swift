@@ -47,7 +47,7 @@ extension GitTrendingAdapter: UITableViewDataSource {
 extension GitTrendingAdapter: UITableViewDelegate {
         
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        return cellFactory.heightForRow(for: rowViewModel(at: indexPath), at: indexPath, in: tableView)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

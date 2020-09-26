@@ -27,3 +27,11 @@ extension URLRequest: Requestable {
     }
 }
 
+enum CacheExpiry {
+    case never
+    case aged(TimeInterval)
+}
+
+protocol CacheRequestable: Requestable  {
+    var expiry: CacheExpiry { get }
+}

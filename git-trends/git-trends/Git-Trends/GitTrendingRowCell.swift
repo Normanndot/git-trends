@@ -37,6 +37,14 @@ final class GitTrendingRowCell: UITableViewCell {
         return label
     }()
     
+    var gitDescriptionWidth: CGFloat {
+        return gitDescription.frame.width
+    }
+    
+    var gitDescriptionFont: UIFont {
+        return gitDescription.font
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUp()
@@ -83,7 +91,6 @@ final class GitTrendingRowCell: UITableViewCell {
             gitDescription.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: leadingConstraint),
             gitDescription.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: trailingConstraint),
             gitDescription.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 68),
-//            gitDescription.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8)
         ])
     }
     
