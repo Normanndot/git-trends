@@ -31,8 +31,8 @@ final class GitTrendingViewPresenter: GitPresenter {
     func startPresenting() {
         
         fetch(forced: true)
-        let refreshHandler: (Bool) -> () = { [weak self] value in
-            self?.fetch(forced: value)
+        let refreshHandler: ((_ value: Bool?) -> Void) = { [weak self] value in
+            self?.fetch(forced: value ?? false)
         }
         
         displayer.attachRefresh(handler: refreshHandler)
@@ -49,8 +49,11 @@ final class GitTrendingViewPresenter: GitPresenter {
                 if forced {
                     self.displayer.detachRefresh()
                 }
-            case .failure(let error):
-                print(error)
+                self.displayer.dettachError()
+            case .failure(_):
+                self.displayer.attachError { (value) in
+                    self.fetch(forced: true)
+                }
             }
         }, forcely: forced)
     }

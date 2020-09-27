@@ -189,7 +189,7 @@ extension GitDetailView {
         let myURL = URL(string: viewModel.repoURL)
         let myRequest = URLRequest(url: myURL!)
         webView.load(myRequest)
-        icon.image = #imageLiteral(resourceName: "star")
+        icon.load(url: URL(string: viewModel.authorIcon)!)
         gitDescription.text = viewModel.description
         
         let forkAttString = NSMutableAttributedString()

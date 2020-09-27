@@ -8,6 +8,11 @@
 import Foundation
 import UIKit
 
+protocol ErrorViewable {
+    func attachError(handler: @escaping ((_ value: Bool?) -> Void))
+    func dettachError()
+}
+
 final class ErrorView: UIView {
     
     private let image: UIImageView = {
@@ -49,6 +54,8 @@ final class ErrorView: UIView {
         return button
     }()
 
+    var retryHandler: ((_ value: Bool?) -> Void)?
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -62,6 +69,11 @@ final class ErrorView: UIView {
     private func setUp() {
         setupHierarchy()
         applyConstraints()
+        retryButton.addTarget(self, action: #selector(retryTapped), for: .touchUpInside)
+    }
+    
+    @objc func retryTapped() {
+        retryHandler?(true)
     }
 }
 

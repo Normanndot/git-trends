@@ -38,6 +38,5 @@ class GitDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         gitDetailView.update(with: viewModel)
-        // Do any additional setup after loading the view.
     }
 }
