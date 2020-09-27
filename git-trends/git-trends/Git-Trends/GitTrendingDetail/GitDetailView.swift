@@ -20,6 +20,8 @@ final class GitDetailView: UIView {
         let img = UIImageView()
         img.clipsToBounds = true
         img.layer.cornerRadius = iconSize/2
+        img.translatesAutoresizingMaskIntoConstraints = false
+        
         return img
     }()
 
@@ -27,12 +29,16 @@ final class GitDetailView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 24.0)
         label.textColor = .systemRed
+        label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
     
     private let horizontalDividerLine: UIView = {
         let view = UIView()
         view.backgroundColor = .lightGray
+        view.translatesAutoresizingMaskIntoConstraints = false
+
         return view
     }()
     
@@ -41,24 +47,32 @@ final class GitDetailView: UIView {
         label.numberOfLines = 0
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = .gray
+        label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
 
     private let starCount: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
     
     private let verticleDividerLine: UIView = {
         let view = UIView()
         view.backgroundColor = .lightGray
+        view.translatesAutoresizingMaskIntoConstraints = false
+
         return view
     }()
     
     private let forkCount: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 16)
+        label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
     
@@ -66,12 +80,16 @@ final class GitDetailView: UIView {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 18)
         label.text = "Readme.md"
+        label.translatesAutoresizingMaskIntoConstraints = false
+
         return label
     }()
     
     lazy var webView: WKWebView = {
         let webView = WKWebView()
         webView.uiDelegate = self
+        webView.translatesAutoresizingMaskIntoConstraints = false
+
         return webView
     }()
     
@@ -105,7 +123,6 @@ extension GitDetailView {
     }
     
     func applyConstraints() {
-        icon.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             icon.widthAnchor.constraint(equalToConstant: GitDetailView.iconSize),
             icon.heightAnchor.constraint(equalToConstant: GitDetailView.iconSize),
@@ -113,13 +130,11 @@ extension GitDetailView {
             icon.topAnchor.constraint(equalTo: topAnchor, constant: yPos + 20)
         ])
         
-        name.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             name.centerXAnchor.constraint(equalTo: icon.centerXAnchor),
             name.topAnchor.constraint(equalTo: icon.bottomAnchor, constant: 20)
         ])
         
-        horizontalDividerLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             horizontalDividerLine.widthAnchor.constraint(equalToConstant: 40),
             horizontalDividerLine.heightAnchor.constraint(equalToConstant: 1),
@@ -127,14 +142,12 @@ extension GitDetailView {
             horizontalDividerLine.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 20)
         ])
         
-        gitDescription.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             gitDescription.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16),
             gitDescription.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
             gitDescription.topAnchor.constraint(equalTo: horizontalDividerLine.bottomAnchor, constant: 20)
         ])
         
-        verticleDividerLine.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             verticleDividerLine.widthAnchor.constraint(equalToConstant: 1),
             verticleDividerLine.heightAnchor.constraint(equalToConstant: 20),
@@ -142,27 +155,23 @@ extension GitDetailView {
             verticleDividerLine.centerXAnchor.constraint(equalTo: gitDescription.centerXAnchor)
         ])
         
-        forkCount.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             forkCount.topAnchor.constraint(equalTo: verticleDividerLine.topAnchor),
             forkCount.bottomAnchor.constraint(equalTo: verticleDividerLine.bottomAnchor),
             forkCount.leadingAnchor.constraint(equalTo: verticleDividerLine.trailingAnchor, constant: 10)
         ])
         
-        starCount.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             starCount.topAnchor.constraint(equalTo: verticleDividerLine.topAnchor),
             starCount.bottomAnchor.constraint(equalTo: verticleDividerLine.bottomAnchor),
             starCount.trailingAnchor.constraint(equalTo: verticleDividerLine.leadingAnchor, constant: -10)
         ])
         
-        readMe.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             readMe.topAnchor.constraint(equalTo: verticleDividerLine.bottomAnchor, constant: 10),
             readMe.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20)
         ])
         
-        webView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             webView.topAnchor.constraint(equalTo: readMe.bottomAnchor, constant: 10),
             webView.centerXAnchor.constraint(equalTo: gitDescription.centerXAnchor),

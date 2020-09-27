@@ -27,6 +27,7 @@
 		818E3F12251F483600C8CB22 /* TimeInterval+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */; };
 		818E3F1B251F620A00C8CB22 /* GitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F1A251F620A00C8CB22 /* GitDetailViewController.swift */; };
 		818E3F2D251F626D00C8CB22 /* GitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F2C251F626D00C8CB22 /* GitDetailView.swift */; };
+		818E3F3F251FAEAD00C8CB22 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F3E251FAEAD00C8CB22 /* ErrorView.swift */; };
 		81E0BD5E251E4C3B00543306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5D251E4C3B00543306 /* AppDelegate.swift */; };
 		81E0BD60251E4C3B00543306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */; };
 		81E0BD62251E4C3B00543306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD61251E4C3B00543306 /* ViewController.swift */; };
@@ -92,6 +93,7 @@
 		818E3F11251F483600C8CB22 /* TimeInterval+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Ext.swift"; sourceTree = "<group>"; };
 		818E3F1A251F620A00C8CB22 /* GitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailViewController.swift; sourceTree = "<group>"; };
 		818E3F2C251F626D00C8CB22 /* GitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailView.swift; sourceTree = "<group>"; };
+		818E3F3E251FAEAD00C8CB22 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		81E0BD5A251E4C3B00543306 /* git-trends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git-trends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD5D251E4C3B00543306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 			path = GitTrendingDetail;
 			sourceTree = "<group>";
 		};
+		818E3F3D251FACBA00C8CB22 /* ErrorScreen */ = {
+			isa = PBXGroup;
+			children = (
+				818E3F3E251FAEAD00C8CB22 /* ErrorView.swift */,
+			);
+			path = ErrorScreen;
+			sourceTree = "<group>";
+		};
 		81E0BD51251E4C3B00543306 = {
 			isa = PBXGroup;
 			children = (
@@ -264,6 +274,7 @@
 		81E0BD90251E4CDF00543306 /* Git-Trends */ = {
 			isa = PBXGroup;
 			children = (
+				818E3F3D251FACBA00C8CB22 /* ErrorScreen */,
 				818E3F16251F614600C8CB22 /* GitTrendingList */,
 				818E3F19251F61BE00C8CB22 /* GitTrendingDetail */,
 				818E3F18251F619B00C8CB22 /* Cache */,
@@ -565,6 +576,7 @@
 				81E0BDA1251E4CDF00543306 /* GitTrendingViewModelFactory.swift in Sources */,
 				818E3F12251F483600C8CB22 /* TimeInterval+Ext.swift in Sources */,
 				81E0BDA6251E4CDF00543306 /* GitTrendingView.swift in Sources */,
+				818E3F3F251FAEAD00C8CB22 /* ErrorView.swift in Sources */,
 				818E3F0D251F3BFF00C8CB22 /* String+Ext.swift in Sources */,
 				8184EF48251E4F5A00E44FA0 /* GitTrendingUseCase.swift in Sources */,
 				81832147251E5ED00055E9A0 /* API.swift in Sources */,

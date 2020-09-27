@@ -21,9 +21,11 @@ final class GitTrendingView: UIView {
     private let adapter = GitTrendingAdapter()
     private let refreshControl = UIRefreshControl()
     private var refreshHandler: (Bool) -> () = {_ in }
+    private let errorView: ErrorView
     
     override init(frame: CGRect) {
         tableView = UITableView(frame: frame, style: .plain)
+        errorView = ErrorView(frame: frame)
         super.init(frame: frame)
         setup()
     }
@@ -44,7 +46,7 @@ final class GitTrendingView: UIView {
         tableView.delegate = adapter
         tableView.dataSource = adapter
         tableView.separatorStyle = .none
-        tableView.addSubview(refreshControl)
+        tableView.addSubviews(refreshControl, errorView)
         refreshControl.addTarget(self, action: #selector(refresh(handler:)), for: .valueChanged)
         GitTrendingCellFactory.registerCells(for: tableView)
     }
