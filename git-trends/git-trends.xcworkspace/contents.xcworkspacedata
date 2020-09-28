@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:git-trends.xcodeproj">
+      location = "group:/Users/tnorman/Desktop/git-trends/git-trends/gitTrends.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">

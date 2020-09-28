@@ -29,6 +29,9 @@
 		818E3F2D251F626D00C8CB22 /* GitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F2C251F626D00C8CB22 /* GitDetailView.swift */; };
 		818E3F3F251FAEAD00C8CB22 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F3E251FAEAD00C8CB22 /* ErrorView.swift */; };
 		818E3F472520A4DE00C8CB22 /* UIImageView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 818E3F462520A4DE00C8CB22 /* UIImageView+Ext.swift */; };
+		819D7927252252ED0054E294 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D7926252252ED0054E294 /* Utils.swift */; };
+		819D792F252253460054E294 /* sample.json in Resources */ = {isa = PBXBuildFile; fileRef = 819D792E252253460054E294 /* sample.json */; };
+		819D7934252253980054E294 /* GitTrendingModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 819D7933252253980054E294 /* GitTrendingModelTests.swift */; };
 		81E0BD5E251E4C3B00543306 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5D251E4C3B00543306 /* AppDelegate.swift */; };
 		81E0BD60251E4C3B00543306 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */; };
 		81E0BD62251E4C3B00543306 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E0BD61251E4C3B00543306 /* ViewController.swift */; };
@@ -96,7 +99,10 @@
 		818E3F2C251F626D00C8CB22 /* GitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitDetailView.swift; sourceTree = "<group>"; };
 		818E3F3E251FAEAD00C8CB22 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 		818E3F462520A4DE00C8CB22 /* UIImageView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Ext.swift"; sourceTree = "<group>"; };
-		81E0BD5A251E4C3B00543306 /* git-trends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "git-trends.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		819D7926252252ED0054E294 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		819D792E252253460054E294 /* sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = sample.json; sourceTree = "<group>"; };
+		819D7933252253980054E294 /* GitTrendingModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitTrendingModelTests.swift; sourceTree = "<group>"; };
+		81E0BD5A251E4C3B00543306 /* gitTrends.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gitTrends.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD5D251E4C3B00543306 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81E0BD5F251E4C3B00543306 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		81E0BD61251E4C3B00543306 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -104,10 +110,10 @@
 		81E0BD66251E4C3D00543306 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81E0BD69251E4C3D00543306 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		81E0BD6B251E4C3D00543306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81E0BD70251E4C3D00543306 /* git-trendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "git-trendsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E0BD70251E4C3D00543306 /* gitTrendsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitTrendsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD74251E4C3D00543306 /* git_trendsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = git_trendsTests.swift; sourceTree = "<group>"; };
 		81E0BD76251E4C3D00543306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		81E0BD7B251E4C3D00543306 /* git-trendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "git-trendsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		81E0BD7B251E4C3D00543306 /* gitTrendsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = gitTrendsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81E0BD7F251E4C3D00543306 /* git_trendsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = git_trendsUITests.swift; sourceTree = "<group>"; };
 		81E0BD81251E4C3D00543306 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81E0BD91251E4CDF00543306 /* GitTrendingRowCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GitTrendingRowCell.swift; sourceTree = "<group>"; };
@@ -217,6 +223,15 @@
 			path = ErrorScreen;
 			sourceTree = "<group>";
 		};
+		819D7925252252D10054E294 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				819D7926252252ED0054E294 /* Utils.swift */,
+				819D792E252253460054E294 /* sample.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		81E0BD51251E4C3B00543306 = {
 			isa = PBXGroup;
 			children = (
@@ -232,9 +247,9 @@
 		81E0BD5B251E4C3B00543306 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81E0BD5A251E4C3B00543306 /* git-trends.app */,
-				81E0BD70251E4C3D00543306 /* git-trendsTests.xctest */,
-				81E0BD7B251E4C3D00543306 /* git-trendsUITests.xctest */,
+				81E0BD5A251E4C3B00543306 /* gitTrends.app */,
+				81E0BD70251E4C3D00543306 /* gitTrendsTests.xctest */,
+				81E0BD7B251E4C3D00543306 /* gitTrendsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +274,8 @@
 			isa = PBXGroup;
 			children = (
 				81E0BD74251E4C3D00543306 /* git_trendsTests.swift */,
+				819D7933252253980054E294 /* GitTrendingModelTests.swift */,
+				819D7925252252D10054E294 /* Resources */,
 				81E0BD76251E4C3D00543306 /* Info.plist */,
 			);
 			path = "git-trendsTests";
@@ -323,9 +340,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81E0BD59251E4C3B00543306 /* git-trends */ = {
+		81E0BD59251E4C3B00543306 /* gitTrends */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81E0BD84251E4C3D00543306 /* Build configuration list for PBXNativeTarget "git-trends" */;
+			buildConfigurationList = 81E0BD84251E4C3D00543306 /* Build configuration list for PBXNativeTarget "gitTrends" */;
 			buildPhases = (
 				601029AAA07FE6D0790298D5 /* [CP] Check Pods Manifest.lock */,
 				81E0BD56251E4C3B00543306 /* Sources */,
@@ -337,14 +354,14 @@
 			);
 			dependencies = (
 			);
-			name = "git-trends";
+			name = gitTrends;
 			productName = "git-trends";
-			productReference = 81E0BD5A251E4C3B00543306 /* git-trends.app */;
+			productReference = 81E0BD5A251E4C3B00543306 /* gitTrends.app */;
 			productType = "com.apple.product-type.application";
 		};
-		81E0BD6F251E4C3D00543306 /* git-trendsTests */ = {
+		81E0BD6F251E4C3D00543306 /* gitTrendsTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81E0BD87251E4C3D00543306 /* Build configuration list for PBXNativeTarget "git-trendsTests" */;
+			buildConfigurationList = 81E0BD87251E4C3D00543306 /* Build configuration list for PBXNativeTarget "gitTrendsTests" */;
 			buildPhases = (
 				4E0901B661089671D51A59E7 /* [CP] Check Pods Manifest.lock */,
 				81E0BD6C251E4C3D00543306 /* Sources */,
@@ -356,14 +373,14 @@
 			dependencies = (
 				81E0BD72251E4C3D00543306 /* PBXTargetDependency */,
 			);
-			name = "git-trendsTests";
+			name = gitTrendsTests;
 			productName = "git-trendsTests";
-			productReference = 81E0BD70251E4C3D00543306 /* git-trendsTests.xctest */;
+			productReference = 81E0BD70251E4C3D00543306 /* gitTrendsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		81E0BD7A251E4C3D00543306 /* git-trendsUITests */ = {
+		81E0BD7A251E4C3D00543306 /* gitTrendsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81E0BD8A251E4C3D00543306 /* Build configuration list for PBXNativeTarget "git-trendsUITests" */;
+			buildConfigurationList = 81E0BD8A251E4C3D00543306 /* Build configuration list for PBXNativeTarget "gitTrendsUITests" */;
 			buildPhases = (
 				ABD7CABED72DEDBC3F2F71F8 /* [CP] Check Pods Manifest.lock */,
 				81E0BD77251E4C3D00543306 /* Sources */,
@@ -376,9 +393,9 @@
 			dependencies = (
 				81E0BD7D251E4C3D00543306 /* PBXTargetDependency */,
 			);
-			name = "git-trendsUITests";
+			name = gitTrendsUITests;
 			productName = "git-trendsUITests";
-			productReference = 81E0BD7B251E4C3D00543306 /* git-trendsUITests.xctest */;
+			productReference = 81E0BD7B251E4C3D00543306 /* gitTrendsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -403,7 +420,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 81E0BD55251E4C3B00543306 /* Build configuration list for PBXProject "git-trends" */;
+			buildConfigurationList = 81E0BD55251E4C3B00543306 /* Build configuration list for PBXProject "gitTrends" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -416,9 +433,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81E0BD59251E4C3B00543306 /* git-trends */,
-				81E0BD6F251E4C3D00543306 /* git-trendsTests */,
-				81E0BD7A251E4C3D00543306 /* git-trendsUITests */,
+				81E0BD59251E4C3B00543306 /* gitTrends */,
+				81E0BD6F251E4C3D00543306 /* gitTrendsTests */,
+				81E0BD7A251E4C3D00543306 /* gitTrendsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -438,6 +455,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				819D792F252253460054E294 /* sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +619,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				81E0BD75251E4C3D00543306 /* git_trendsTests.swift in Sources */,
+				819D7934252253980054E294 /* GitTrendingModelTests.swift in Sources */,
+				819D7927252252ED0054E294 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -617,12 +637,12 @@
 /* Begin PBXTargetDependency section */
 		81E0BD72251E4C3D00543306 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81E0BD59251E4C3B00543306 /* git-trends */;
+			target = 81E0BD59251E4C3B00543306 /* gitTrends */;
 			targetProxy = 81E0BD71251E4C3D00543306 /* PBXContainerItemProxy */;
 		};
 		81E0BD7D251E4C3D00543306 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 81E0BD59251E4C3B00543306 /* git-trends */;
+			target = 81E0BD59251E4C3B00543306 /* gitTrends */;
 			targetProxy = 81E0BD7C251E4C3D00543306 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -819,7 +839,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/git-trends.app/git-trends";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gitTrends.app/gitTrends";
 			};
 			name = Debug;
 		};
@@ -841,7 +861,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/git-trends.app/git-trends";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/gitTrends.app/gitTrends";
 			};
 			name = Release;
 		};
@@ -888,7 +908,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81E0BD55251E4C3B00543306 /* Build configuration list for PBXProject "git-trends" */ = {
+		81E0BD55251E4C3B00543306 /* Build configuration list for PBXProject "gitTrends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81E0BD82251E4C3D00543306 /* Debug */,
@@ -897,7 +917,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81E0BD84251E4C3D00543306 /* Build configuration list for PBXNativeTarget "git-trends" */ = {
+		81E0BD84251E4C3D00543306 /* Build configuration list for PBXNativeTarget "gitTrends" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81E0BD85251E4C3D00543306 /* Debug */,
@@ -906,7 +926,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81E0BD87251E4C3D00543306 /* Build configuration list for PBXNativeTarget "git-trendsTests" */ = {
+		81E0BD87251E4C3D00543306 /* Build configuration list for PBXNativeTarget "gitTrendsTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81E0BD88251E4C3D00543306 /* Debug */,
@@ -915,7 +935,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81E0BD8A251E4C3D00543306 /* Build configuration list for PBXNativeTarget "git-trendsUITests" */ = {
+		81E0BD8A251E4C3D00543306 /* Build configuration list for PBXNativeTarget "gitTrendsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				81E0BD8B251E4C3D00543306 /* Debug */,
