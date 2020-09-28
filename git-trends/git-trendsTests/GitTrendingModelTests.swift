@@ -15,7 +15,7 @@ class GitTrendingModelTests: XCTestCase {
     }
     
     func testModel() {
-        if let repos = Utils.readJSONFromFile(fileName: "sample", type: Repos.self) as? Repos {
+        if let repos = Utils.readJSONFromFile(fileName: "sample", type: Repos.self) {
             for aRepo in repos {
                 XCTAssertNil(aRepo.author)
                 XCTAssertNil(aRepo.avatar)
