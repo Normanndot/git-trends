@@ -15,11 +15,6 @@ final class GitTrendingUseCaseSpy: TrendingUseCase {
             DispatchQueue.main.async {
                 completion(.success(repos))
             }
-        } else {
-//            let error = Error.self
-            DispatchQueue.main.async {
-//                completion(.failure(error))
-            }
         }
     }
 }

@@ -10,29 +10,52 @@ import XCTest
 
 class GitTrendingPresenterTests: XCTestCase {
     private var presenter: GitPresenter? = nil
+    private let nav = UINavigationController()
+    private let useCase = GitTrendingUseCaseSpy()
+    private let view = GitTrendingView(frame: CGRect(x: 0,
+                                                     y: 0,
+                                                     width: 100,
+                                                     height: 100))
     
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
     
     func testGitTrendingPresenter() {
-        let view = gitTrendingView()
-        let navigator = GitTrendingViewNavigator(navigation: UINavigationController())
-        let useCase = GitTrendingUseCaseSpy()
+        let navigator = GitTrendingViewNavigator(navigation: nav)
         presenter = GitTrendingViewPresenter(displayer: view,
                                              navigator: navigator,
                                              useCase: useCase)
         presenter?.startPresenting()
-        navigator.toGitDetailView(model: <#T##GitTrendingRow#>)
     }
     
-    private func gitTrendingView() -> GitTrendingView {
+    func testGitDetail() {
+        let navigator = GitTrendingViewNavigator(navigation: nav)
+        let model = GitTrendingRowViewModel(author: "", authorIcon: "", authorName: "", description: "", starCount: "", forkCount: "", repoURL: "")
+        let row = GitTrendingRow.gitTrendingDetails(viewModel: model)
+        navigator.toGitDetailView(model: row)
+        XCTAssertTrue(nav.topViewController is GitDetailViewController)
+    }
+    
+    func testUseCase() {
+        let factory = GitTrendingViewModelFactory()
+        useCase.fetchTopGitTrending(with: { (result) in
+            switch result {
+            case .success(let repos):
+                let result = factory.viewModel(for: repos)
+                XCTAssertTrue(result.rows.count > 0)
+            case .failure(_): break
+            }
+        }, forcely: true)
+    }
+    
+    func testRow() {
+        let aModel = GitTrendingRowViewModel(author: "name", authorIcon: "", authorName: "Ganesh", description: "", starCount: "", forkCount: "", repoURL: "Ganesh")
+        let bModel = GitTrendingRowViewModel(author: "name", authorIcon: "", authorName: "Norman", description: "", starCount: "", forkCount: "", repoURL: "Ganesh")
+        let aRow = GitTrendingRow.gitTrendingDetails(viewModel: aModel)
+        let bRow = GitTrendingRow.gitTrendingDetails(viewModel: bModel)
         
-        let view = GitTrendingView(frame: CGRect(x: 0,
-                                                 y: 0,
-                                                 width: 100,
-                                                 height: 100))
-        return view
+        XCTAssertTrue(aRow == bRow)
     }
 
     override func tearDownWithError() throws {
