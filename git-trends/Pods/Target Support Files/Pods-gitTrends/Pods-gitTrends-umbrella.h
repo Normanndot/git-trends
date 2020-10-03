@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_git_trendsVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_git_trendsVersionString[];
+FOUNDATION_EXPORT double Pods_gitTrendsVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_gitTrendsVersionString[];
 

@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E16FC21589BE787D135CE59E545A729"
-               BuildableName = "Pods_git_trends_git_trendsUITests.framework"
-               BlueprintName = "Pods-git-trends-git-trendsUITests"
+               BlueprintIdentifier = "C5C9DB096F0EC46190B771AB613D3C4F"
+               BuildableName = "Pods_gitTrends.framework"
+               BlueprintName = "Pods-gitTrends"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
